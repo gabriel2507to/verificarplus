@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="es-EC">
+<head>
+    <link rel="icon" type="image/x-icon" href="favicon.ico?v=2">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+   <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-C0JQ3NNZT9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-C0JQ3NNZT9');
+</script>
+
+   <!-- Meta etiquetas de configuración -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VerifiCar Plus | Control total de pedidos para tu negocio de alimentos</title>
+<meta name="description" content="Toma el control de tus ventas. Elimina comisiones de apps de delivery en Cuenca. Gestiona pedidos por WhatsApp, atención en mesa y logística propia desde una sola plataforma.">
+
+<!-- Etiquetas para compartir en WhatsApp/Redes Sociales -->
+<link rel="canonical" href="https://plus.verificarecuador.com/">
+<meta property="og:title" content="VerifiCar Plus | Tu Negocio, Tus Reglas">
+<meta property="og:description" content="Deja de pagar comisiones abusivas. Gestiona tus pedidos, delivery y atención en mesa desde tu propia plataforma digital en Cuenca.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://plus.verificarecuador.com/">
+
+<style>
+:root {
+    --primary-blue: #1d4099;
+    --whatsapp-green: #25d366;
+    --text-dark: #1a202c;
+    --text-light: #64748b;
+    --bg-light: #f8f9fa;
+    --white: #ffffff;
+}
+
+* { box-sizing: border-box; scroll-behavior: smooth; }
+
+body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    margin: 0; padding: 0;
+    color: var(--text-dark);
+}
+
+/* NAVEGACIÓN - Ajuste para móvil y desktop */
+nav {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 15px 5%; background: var(--white);
+    box-shadow: 0 4px 6px -1px #1d4099;
+    position: sticky; top: 0; z-index: 1000;
+}
+
+/* LOGO - Centrado móvil, izquierda desktop */
+.logo { text-align: center; display: flex; justify-content: center; align-items: center; }
+.logo img { height: 45px; width: auto; }
+
+/* MENÚ LINKS */
+.nav-links { display: flex; list-style: none; gap: 20px; align-items: center; margin: 0; padding: 0; }
+.nav-links a { text-decoration: none; color: #1d4099; font-weight: 600; }
+
+/* BOTÓN HAMBURGUESA */
+.menu-toggle { display: none; font-size: 28px; background: none; border: none; cursor: pointer; color: var(--primary-blue); }
+
+/* ESTILOS MÓVIL (Menor a 769px) */
+@media (max-width: 768px) {
+    nav { flex-direction: column; height: auto; padding: 15px; }
+    
+    .nav-container-top { width: 100%; display: flex; justify-content: space-between; align-items: center; }
+    
+    .menu-toggle { display: block; }
+
+    .nav-links {
+        display: none; /* Oculto por defecto */
+        flex-direction: column;
+        width: 100%;
+        padding-top: 15px;
+        border-top: 1px solid #eee;
+    }
+    
+    .nav-links.active { display: flex; }
+    .nav-links li { width: 100%; text-align: center; padding: 10px 0; }
+}
+
+/* BLOQUES DE CONTENIDO (Clases base) */
+.section { padding: 80px 20px; max-width: 900px; margin: 0 auto; text-align: center; }
+
+/* BLOQUE 1: IMPACTO */
+#inicio { background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border-radius: 0 0 40px 40px; }
+h1 { font-size: 2.5rem; margin-bottom: 10px; color: var(--primary-blue); }
+.subtitle { font-size: 1.25rem; color: var(--text-dark); margin-bottom: 30px; }
+
+/* BLOQUE 2: GANCHO (PROBLEMA) */
+#gancho { background: var(--white); padding: 60px 20px; }
+.box-problema { background: #fff5f5; padding: 30px; border-radius: 20px; border-left: 6px solid #e53e3e; }
+
+/* BLOQUE 3: CÓMO FUNCIONA */
+.steps-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-top: 40px; }
+.step-card { flex: 1; min-width: 200px; padding: 20px; background: var(--bg-light); border-radius: 15px; }
+
+/* BLOQUE 4: PRUEBA (CTA) */
+.btn-main {
+    padding: 20px 40px; background: var(--whatsapp-green);
+    color: white; border: none; border-radius: 12px;
+    font-size: 1.2rem; font-weight: 700; cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
+}
+.btn-main:hover { background: #128c7e; transform: scale(1.05); }
+
+/* BLOQUE 5: FORMULARIO CONTACTO */
+.form-box {
+    max-width: 400px; margin: 40px auto; background: var(--white);
+    padding: 30px; border-radius: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+input {
+    width: 100%; padding: 15px; margin-bottom: 15px;
+    border: 2px solid #e2e8f0; border-radius: 10px;
+}
+
+/* RESPONSIVIDAD */
+@media (max-width: 768px) {
+    h1 { font-size: 1.8rem; }
+    .step-card { min-width: 100%; }
+}
+
+.wp-float {
+    position: fixed; bottom: 25px; right: 25px; background: var(--whatsapp-green);
+    color: white; width: 60px; height: 60px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 30px; box-shadow: 2px 5px 15px rgba(0,0,0,0.2); z-index: 2000;
+}
+
+
+    /* Efecto al pasar el mouse */
+    #navLinks a:hover {
+        color: #1d4099;
+        border-bottom: 2px solid #1d4099;
+    }
+
+    /* Estilo del botón Probar Demo */
+    .btn-nav-demo {
+        background: #25d366 !important; /* Verde WhatsApp */
+        color: white !important;
+        padding: 10px 22px !important;
+        border-radius: 50px !important; /* Botón redondeado moderno */
+        box-shadow: 0 4px 6px rgba(37, 211, 102, 0.2);
+        transition: transform 0.2s ease, box-shadow 0.3s ease !important;
+        border-bottom: none !important; /* Quitamos el borde de los otros links */
+    }
+
+    .btn-nav-demo:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 12px rgba(37, 211, 102, 0.4);
+        color: white !important;
+    }
+
+.btn-descargar {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    background-color: #2563eb;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: background-color 0.2s;
+}
+
+.btn-descargar:hover {
+    background-color: #1d4ed8;
+}
+
+</style>
+</head>
+<body>
+
+<!-- MENÚ DE NAVEGACIÓN -->
+<nav>
+    <div class="nav-container-top" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+        <div class="logo">
+            <img src="img/logo-verificar-plus.png" alt="VerifiCar Plus" width="200" height="60">
+        </div>
+        <!-- Botón que dispara el toggle -->
+        <button class="menu-toggle" onclick="toggleMenu()" style="font-size: 30px; border: none; background: none; cursor: pointer;">☰</button>
+    </div>
+
+    <!-- El ID es 'navLinks' -->
+    <ul class="nav-links" id="navLinks">
+        <li><a href="#inicio" onclick="toggleMenu()">Inicio</a></li>
+        <li><a href="#beneficios" onclick="toggleMenu()">Beneficios</a></li>
+        <li><a href="#planes" onclick="toggleMenu()">Planes</a></li>
+        <li><a href="#tutoriales" onclick="toggleMenu()">¿Cómo funciona?</a></li>
+        <li><a href="#contacto" onclick="toggleMenu()">Contacto</a></li>
+        
+    </ul>
+</nav>
+
+<!-- SECCIÓN 1: INICIO (Limpio y con énfasis en color) -->
+<section id="inicio" style="text-align: center; padding: 100px 20px; background: #ffffff; border-bottom: 2px solid #f0f0f0;">
+    
+    <!-- Ícono con sombra suave de color -->
+    <div style="margin-bottom: 25px;">
+        <i class="fa-solid fa-store" style="font-size: 4rem; color: #1d4099; filter: drop-shadow(0 5px 5px rgba(29, 64, 153, 0.2));"></i>
+    </div>
+
+    <h1 style="color: #1d4099; font-size: 2.8rem; margin-bottom: 15px; font-weight: 800; letter-spacing: -1px;">
+        Más ventas, <span style="color: #25d366;">Cero Comisiones.</span>
+    </h1>
+    
+   <h2 style="color: #4a5568; font-size: 1.3rem; margin-bottom: 35px; font-weight: 400; max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.6;">
+    <i class="fa-solid fa-motorcycle" style="color: #25d366; margin-right: 8px;"></i> Delivery 
+    <span style="color: #cbd5e0; margin: 0 10px;">|</span> 
+    <i class="fa-solid fa-utensils" style="color: #1d4099; margin-right: 8px;"></i> Mesa <br>
+    <span style="display: block; margin-top: 10px;">Toma el control total de tu negocio en <b>Cuenca</b>.</span>
+</h2>
+    
+   <!-- Contenedor para los dos botones de demo -->
+    <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 20px;">
+        
+        <!-- Botón Versión Básica -->
+        <a href="https://cerocomisiondemo-basico.netlify.app/" target="_blank" style="background: #25d366; color: white; padding: 15px 35px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 1.1rem; display: inline-block; box-shadow: 0 8px 20px rgba(37, 211, 102, 0.3); transition: transform 0.3s ease;">
+            <i class="fa-solid fa-rocket" style="margin-right: 10px;"></i> Probar Demo Básico
+        </a>
+
+        <!-- Botón Versión Plus -->
+        <a href="https://cerocomisiondemo-plus.netlify.app/" target="_blank" style="background: #ff4757; color: white; padding: 15px 35px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 1.1rem; display: inline-block; box-shadow: 0 8px 20px rgba(255, 71, 87, 0.3); transition: transform 0.3s ease;">
+            <i class="fa-solid fa-star" style="margin-right: 10px;"></i> Probar Demo Plus
+        </a>
+
+    </div>
+
+    <!-- Elementos de confianza -->
+    <div style="margin-top: 40px; display: flex; justify-content: center; gap: 30px; color: #777; font-size: 0.95rem;">
+        <span><i class="fa-solid fa-check-circle" style="color: #25d366; margin-right: 5px;"></i> Configuración rápida</span>
+        <span><i class="fa-solid fa-check-circle" style="color: #25d366; margin-right: 5px;"></i> Sin apps intermediarias</span>
+    </div>
+</section>
+
+<!-- Sección de prueba de Google Sheets para las dos versiones -->
+    <div style="margin-top: 25px; text-align: center; background: #f9f9f9; padding: 20px; border-radius: 12px; border: 1px dashed #ccc; max-width: 600px; margin-left: auto; margin-right: auto;">
+        <p style="margin: 0 0 15px 0; color: #555; font-size: 0.95rem; font-weight: bold;">
+            <i class="fa-solid fa-file-excel" style="color: #0F9D58; margin-right: 5px;"></i> 
+            Prueba cómo cambia el menú del día en tiempo real:
+        </p>
+        
+        <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+            <!-- Link Google Sheet Versión Básica -->
+            <a href="https://docs.google.com/spreadsheets/d/1gXniU59BWlwX6LnVFkLAZ4AFHV1O3DdjkRgLR_VKb3w/edit?usp=sharing" target="_blank" style="color: #25d366; font-weight: bold; text-decoration: underline; font-size: 0.9rem;">
+                📄 Editar Menú Versión Básica ↗
+            </a>
+
+            <!-- Link Google Sheet Versión Plus/Premium -->
+            <a href="https://docs.google.com/spreadsheets/d/1al79ppUYedB8MWqALWmf06n9IWxsL43rJ1f0zDTrLqQ/edit?usp=sharing" target="_blank" style="color: #ff4757; font-weight: bold; text-decoration: underline; font-size: 0.9rem;">
+                📄 Editar Menú Versión Plus ↗
+            </a>
+        </div>
+    </div>
+
+<!-- SECCIÓN BENEFICIOS -->
+<section id="beneficios" style="padding: 80px 20px; background: #ffffff; text-align: center;">
+    <h2 style="font-size: 2.2rem; margin-bottom: 50px; color: #1d4099; font-weight: 800;">Tus ganancias, bajo tu control</h2>
+    
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; max-width: 1000px; margin: 0 auto;">
+        
+        <!-- Beneficio 1: 100% Ganancias -->
+        <div style="flex: 1; min-width: 250px; padding: 30px; border-radius: 25px; background: #fff; transition: transform 0.3s;">
+            <div style="width: 80px; height: 80px; margin: 0 auto 20px auto; background: linear-gradient(135deg, #28a745, #20c997); border-radius: 20px; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 20px rgba(40, 167, 69, 0.3);">
+                <i class="fa-solid fa-money-bill-wave" style="font-size: 2rem; color: white;"></i>
+            </div>
+            <h3 style="margin: 10px 0; color: #1d4099;">100% de tus ganancias</h3>
+            <p style="color: #1a1a1a; line-height: 1.6; font-size: 1.1rem; padding: 20px; background: #f8fafc; border-radius: 15px; border-left: 5px solid #25d366;">
+    <i class="fa-solid fa-hand-holding-dollar" style="color: #25d366; margin-right: 10px;"></i> 
+    <b>Olvídate de las comisiones del 25%.</b> <br>
+    Cada dólar de tu venta se queda íntegramente en tu caja.
+</p>
+        </div>
+
+        <!-- Beneficio 2: WhatsApp -->
+        <div style="flex: 1; min-width: 250px; padding: 30px; border-radius: 25px; background: #fff; transition: transform 0.3s;">
+            <div style="width: 80px; height: 80px; margin: 0 auto 20px auto; background: linear-gradient(135deg, #25d366, #128c7e); border-radius: 20px; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3);">
+                <i class="fa-brands fa-whatsapp" style="font-size: 2rem; color: white;"></i>
+            </div>
+            <h3 style="margin: 10px 0; color: #1d4099;">Pedidos directo a WhatsApp</h3>
+            <p style="color: #1a1a1a; line-height: 1.6; font-size: 1.1rem; padding: 20px; background: #f8fafc; border-radius: 15px; border-left: 5px solid #1d4099;">
+    <i class="fa-solid fa-mobile-screen-button" style="color: #1d4099; margin-right: 10px;"></i> 
+    <b>Recibe pedidos al instante en tu móvil.</b> <br>
+    Sin intermediarios, sin errores y con toda la información clara.
+</p>
+        </div>
+
+        <!-- Beneficio 3: Logística -->
+        <div style="flex: 1; min-width: 250px; padding: 30px; border-radius: 25px; background: #fff; transition: transform 0.3s;">
+            <div style="width: 80px; height: 80px; margin: 0 auto 20px auto; background: linear-gradient(135deg, #f39c12, #e67e22); border-radius: 20px; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 20px rgba(243, 156, 18, 0.3);">
+                <i class="fa-solid fa-motorcycle" style="font-size: 2rem; color: white;"></i>
+            </div>
+            <h3 style="margin: 10px 0; color: #1d4099;">Tú eliges cómo entregas</h3>
+            <p style="color: #1a1a1a; line-height: 1.6; font-size: 1.1rem; padding: 20px; background: #f8fafc; border-radius: 15px; border-left: 5px solid #25d366;">
+    <i class="fa-solid fa-house-chimney-user" style="color: #25d366; margin-right: 10px;"></i> 
+    <b>Delivery propio, externo o consumo en mesa.</b> <br>
+    Mantén la autonomía operativa de tu negocio en <b>Cuenca</b>.
+</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- SECCIÓN PAQUETES -->
+<section id="planes" style="text-align: center; padding: 100px 20px; background: #ffffff; border-bottom: 2px solid #f0f0f0;">
+    
+<div style="max-width: 800px; margin: 40px auto; padding: 20px;">
+    <h2 style="text-align: center; color: #1d4099; margin-bottom: 25px;">🚀 ¿Qué nivel eliges hoy?</h2>
+    <table style="width: 100%; border-collapse: collapse; background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.1);">
+        <tr style="background: #25d366; color: #1a1a1a;">
+            <th style="padding: 15px; text-align: left;">Característica</th>
+            <th style="padding: 15px; text-align: center;">Básico<br><span style="font-size: 0.85em; font-weight: normal;">($30 + $10/mes)</span></th>
+            <th style="padding: 15px; text-align: center;">Premium<br><span style="font-size: 0.85em; font-weight: normal;">($50 + $20/mes)</span></th>
+        </tr>
+        <tr>
+            <td style="padding: 15px; border-bottom: 1px solid #eee;">🛵 Pedidos (Delivery/Mesa) + Carta Fija y Menú del Día</td>
+            <td style="padding: 15px; text-align: center; border-bottom: 1px solid #eee;">✅</td>
+            <td style="padding: 15px; text-align: center; border-bottom: 1px solid #eee;">✅</td>
+        </tr>
+        <tr>
+            <td style="padding: 15px; border-bottom: 1px solid #eee;">🥗 Extras y Personalización</td>
+            <td style="padding: 15px; text-align: center; border-bottom: 1px solid #eee;">❌</td>
+            <td style="padding: 15px; text-align: center; border-bottom: 1px solid #eee;">⭐</td>
+        </tr>
+        <tr>
+            <td style="padding: 15px; border-bottom: 1px solid #eee;">🧮 Cálculo automático total</td>
+            <td style="padding: 15px; text-align: center; border-bottom: 1px solid #eee;">❌</td>
+            <td style="padding: 15px; text-align: center; border-bottom: 1px solid #eee;">⭐</td>
+        </tr>
+        <tr>
+            <td style="padding: 15px;">💳 Pago QR Integrado</td>
+            <td style="padding: 15px; text-align: center;">❌</td>
+            <td style="padding: 15px; text-align: center;">⭐</td>
+        </tr>
+    </table>
+    <p style="text-align: center; margin-top: 15px; color: #1a1a1a; font-size: 0.9em;">⭐ <i>Experiencia completa recomendada</i></p>
+</div>
+</section>
+
+<a href="veriPlus.pdf" download="Propuesta_Verificar_Plus.pdf" class="btn-descargar">
+    📥 Descargar Propuesta y Guía en PDF
+</a>
+
+<!-- SECCIÓN: CÓMO FUNCIONA (Mejorada) -->
+<section id="tutoriales" style="padding: 80px 20px; background-color: #ffffff;">
+    <h2 style="text-align: center; color: #1d4099; font-size: 2.2rem; margin-bottom: 50px; font-weight: 800;">Tu sistema funcionando en 3 pasos</h2>
+
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; max-width: 1100px; margin: 0 auto;">
+        
+        <!-- Paso 1 -->
+        <div style="flex: 1; min-width: 280px; max-width: 350px; padding: 40px; background: #ffffff; border-radius: 30px; box-shadow: 0 15px 35px rgba(0,0,0,0.05); border-top: 6px solid #2ECC71;">
+            <div style="width: 70px; height: 70px; margin: 0 auto 20px auto; background: linear-gradient(135deg, #2ECC71, #27ae60); border-radius: 20px; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 15px rgba(46, 204, 113, 0.3);">
+                <i class="fa-solid fa-qrcode" style="font-size: 1.8rem; color: white;"></i>
+            </div>
+            <h3 style="color: #1d4099; margin-bottom: 15px;">1. El cliente pide</h3>
+            <p style="color: #1a1a1a; line-height: 1.6; font-size: 1.1rem; padding: 20px; background: #f8fafc; border-radius: 15px; border-left: 5px solid #1d4099; margin: 0;">
+    <i class="fa-solid fa-qrcode" style="color: #1d4099; margin-right: 10px;"></i> 
+    <b>Tus clientes escanean tu QR o entran a tu link.</b> <br>
+    Sin apps que instalar ni registros complicados.
+</p>
+        </div>
+
+        <!-- Paso 2 -->
+        <div style="flex: 1; min-width: 280px; max-width: 350px; padding: 40px; background: #ffffff; border-radius: 30px; box-shadow: 0 15px 35px rgba(0,0,0,0.05); border-top: 6px solid #FFD700;">
+            <div style="width: 70px; height: 70px; margin: 0 auto 20px auto; background: linear-gradient(135deg, #FFD700, #f39c12); border-radius: 20px; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 15px rgba(255, 215, 0, 0.3);">
+                <i class="fa-brands fa-whatsapp" style="font-size: 1.8rem; color: white;"></i>
+            </div>
+            <h3 style="color: #1d4099; margin-bottom: 15px;">2. Recibes en WhatsApp</h3>
+            <p style="color: #1a1a1a; line-height: 1.6; font-size: 1.1rem; padding: 20px; background: #f8fafc; border-radius: 15px; border-left: 5px solid #25d366; margin: 0;">
+    <i class="fa-solid fa-clipboard-check" style="color: #25d366; margin-right: 10px;"></i> 
+    <b>El pedido llega detallado al instante a tu número personal.</b> <br>
+    Tú gestionas la entrega y el servicio.
+</p>
+        </div>
+
+        <!-- Paso 3 -->
+        <div style="flex: 1; min-width: 280px; max-width: 350px; padding: 40px; background: #ffffff; border-radius: 30px; box-shadow: 0 15px 35px rgba(0,0,0,0.05); border-top: 6px solid #E74C3C;">
+            <div style="width: 70px; height: 70px; margin: 0 auto 20px auto; background: linear-gradient(135deg, #E74C3C, #c0392b); border-radius: 20px; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 15px rgba(231, 76, 60, 0.3);">
+                <i class="fa-solid fa-pen-to-square" style="font-size: 1.8rem; color: white;"></i>
+            </div>
+            <h3 style="color: #1d4099; margin-bottom: 15px;">3. Menú siempre al día</h3>
+            <p style="color: #1a1a1a; line-height: 1.6; font-size: 1.1rem; padding: 20px; background: #f8fafc; border-radius: 15px; border-left: 5px solid #1d4099; margin: 0;">
+    <i class="fa-solid fa-file-excel" style="color: #1d4099; margin-right: 10px;"></i> 
+    <b>Actualiza tu menú del dia, desde una hoja de Google Sheets en segundos.</b> <br>
+    Todo bajo tu control total.
+</p>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- SECCIÓN: Preguntas Frecuentes -->
+<section id="faq" style="padding: 80px 20px; background-color: #f8fafc;">
+    <h3 style="text-align: center; color: #1d4099; margin-bottom: 50px; font-weight: 800; font-size: 2rem;">
+        <i class="fa-solid fa-circle-question" style="color: #25d366; margin-right: 12px;"></i>
+        Preguntas frecuentes
+    </h3>
+
+   <div style="margin: 0 auto; max-width: 650px; display: flex; flex-direction: column; gap: 20px;">
+    
+    <!-- Card 1 -->
+    <div style="background: #ffffff; padding: 25px; border-radius: 20px; border-left: 5px solid #25d366; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+        <p style="margin: 0 0 10px 0; color: #1d4099; font-weight: 700; font-size: 1.1em; display: flex; align-items: center;">
+            <i class="fa-solid fa-mobile-screen" style="color: #25d366; margin-right: 15px; font-size: 1.2em;"></i> 
+            ¿Necesito instalar algo?
+        </p>
+        <p style="margin: 0 0 0 40px; color: #1a1a1a; line-height: 1.6; text-align: justify;">
+            No, es una web app ligera. Funciona directamente en el navegador de cualquier celular, sin instalaciones pesadas ni registros complicados.
+        </p>
+    </div>
+
+    <!-- Card 2 -->
+    <div style="background: #ffffff; padding: 25px; border-radius: 20px; border-left: 5px solid #1d4099; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+        <p style="margin: 0 0 10px 0; color: #1d4099; font-weight: 700; font-size: 1.1em; display: flex; align-items: center;">
+            <i class="fa-solid fa-percent" style="color: #1d4099; margin-right: 15px; font-size: 1.2em;"></i> 
+            ¿Cobran comisiones?
+        </p>
+        <p style="margin: 0 0 0 40px; color: #1a1a1a; line-height: 1.6; text-align: justify;">
+            ¡Para nada! VerifiCar Plus es una solución de gestión. Tú eres dueño de tus ventas; no cobramos comisiones por pedido, todo el margen es tuyo.
+        </p>
+    </div>
+
+    <!-- Card 3 -->
+    <div style="background: #ffffff; padding: 25px; border-radius: 20px; border-left: 5px solid #25d366; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+        <p style="margin: 0 0 10px 0; color: #1d4099; font-weight: 700; font-size: 1.1em; display: flex; align-items: center;">
+            <i class="fa-solid fa-file-excel" style="color: #25d366; margin-right: 15px; font-size: 1.2em;"></i> 
+            ¿Cómo cambio el Menú del día?
+        </p>
+        <p style="margin: 0 0 0 40px; color: #1a1a1a; line-height: 1.6; text-align: justify;">
+            Es muy fácil. Modifica el menú directamente en tu hoja de Google Sheets. Tus cambios se guardan y el almuerzo se actualiza al instante para tus clientes sin tocar el código.
+        </p>
+    </div>
+    </div>
+</section>
+
+<!-- SECCIÓN UNIFICADA: CONFIANZA Y TECNOLOGÍA -->
+<section id="confianza-tecnologia" style="padding: 80px 20px; background: #ffffff; text-align: center;">
+    <h2 style="color: #1d4099; font-size: 2rem; margin-bottom: 50px; font-weight: 800;">¿Por qué elegirnos en Cuenca?</h2>
+    
+    <!-- Tarjetas de Confianza -->
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; max-width: 1100px; margin: 0 auto 50px auto;">
+        
+        <div style="flex: 1; min-width: 280px; padding: 30px; border-radius: 20px; background: #f8fafc; border: 1px solid #e2e8f0;">
+            <i class="fa-solid fa-wallet" style="font-size: 2.5rem; color: #25d366; margin-bottom: 20px;"></i>
+            <h3 style="color: #1d4099; margin-bottom: 15px;">💰 Adiós a las comisiones</h3>
+            <p style="color: #1a1a1a; line-height: 1.6;">No pagues el 25% de tu esfuerzo a apps externas. El 100% de tus ventas regresan directamente a tu caja.</p>
+        </div>
+
+        <div style="flex: 1; min-width: 280px; padding: 30px; border-radius: 20px; background: #f8fafc; border: 1px solid #e2e8f0;">
+            <i class="fa-solid fa-location-dot" style="font-size: 2.5rem; color: #1d4099; margin-bottom: 20px;"></i>
+            <h3 style="color: #1d4099; margin-bottom: 15px;">📍 Soporte 100% Cuencano</h3>
+            <p style="color: #1a1a1a; line-height: 1.6;">Estamos aquí mismo. Si tienes dudas, contacto directo por WhatsApp; nada de respuestas automáticas ni esperas.</p>
+        </div>
+
+        <div style="flex: 1; min-width: 280px; padding: 30px; border-radius: 20px; background: #f8fafc; border: 1px solid #e2e8f0;">
+            <i class="fa-solid fa-shield-halved" style="font-size: 2.5rem; color: #25d366; margin-bottom: 20px;"></i>
+            <h3 style="color: #1d4099; margin-bottom: 15px;">🛡️ Tu tranquilidad es prioridad</h3>
+            <p style="color: #1a1a1a; line-height: 1.6;">Te acompañamos en la configuración inicial de forma rápida y sencilla. Sin contratos ni letras chiquitas.</p>
+        </div>
+    </div>
+
+    <!-- Fila pequeña de Tecnología (Compacta) -->
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; align-items: center; border-top: 1px solid #e2e8f0; pt: 30px; margin-top: 20px;">
+        <p style="color: #64748b; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; width: 100%; margin-bottom: 15px;">🚀 Respaldado por:</p>
+        <span style="color: #1d4099; font-weight: bold;"><i class="fa-solid fa-file-excel" style="color: #107c41; margin-right: 8px;"></i> Google Sheets</span>
+        <span style="color: #1d4099; font-weight: bold;"><i class="fa-brands fa-whatsapp" style="color: #25d366; margin-right: 8px;"></i> WhatsApp API</span>
+        <span style="color: #1d4099; font-weight: bold;"><i class="fa-solid fa-lock" style="color: #1d4099; margin-right: 8px;"></i> Seguro HTTPS</span>
+    </div>
+</section>
+
+<!-- SECCIÓN CONTACTO (Mejorada) -->
+<section id="contacto" style="text-align: center; padding: 80px 20px; background-color: #f8fafc;">
+    
+    <!-- Ícono decorativo superior -->
+    <div style="margin-bottom: 20px;">
+        <i class="fa-solid fa-headset" style="font-size: 3rem; color: #1d4099;"></i>
+    </div>
+
+    <h2 style="color: #1d4099; font-size: 2rem; margin-bottom: 10px; font-weight: 800;">¿Listo para tomar el control de tu negocio?</h2>
+    <p style="color: #1a1a1a; line-height: 1.5; font-size: 1.1rem; padding: 20px; background: #f8fafc; border-radius: 15px; margin-bottom: 30px; display: flex; align-items: center; justify-content: center; text-align: center;">
+    <i class="fa-solid fa-calendar-check" style="color: #25d366; margin-right: 12px; font-size: 1.4rem;"></i> 
+    <span><b>Déjanos tus datos y te contactaremos para mostrarte una demo en vivo.</b></span>
+    </p>
+
+    <div class="form-box" style="max-width: 450px; margin: 0 auto; background: white; padding: 40px; border-radius: 30px; box-shadow: 0 20px 40px rgba(0,0,0,0.08);">
+        
+        <!-- Input con íconos dentro -->
+        <div style="position: relative; margin-bottom: 15px;">
+            <i class="fa-solid fa-store" style="position: absolute; left: 15px; top: 18px; color: #a0aec0;"></i>
+            <input type="text" id="nombreNegocio" placeholder="Nombre de tu negocio" style="width: 100%; padding: 15px 15px 15px 40px; border: 2px solid #e2e8f0; border-radius: 12px; outline: none; transition: border-color 0.3s;">
+        </div>
+
+        <div style="position: relative; margin-bottom: 25px;">
+            <i class="fa-brands fa-whatsapp" style="position: absolute; left: 15px; top: 18px; color: #a0aec0;"></i>
+            <input type="text" id="whatsappContacto" placeholder="Tu número de WhatsApp" style="width: 100%; padding: 15px 15px 15px 40px; border: 2px solid #e2e8f0; border-radius: 12px; outline: none; transition: border-color 0.3s;">
+        </div>
+
+        <button onclick="solicitarDemo()" style="width: 100%; padding: 18px; background: #25d366; color: white; border: none; border-radius: 12px; font-weight: bold; font-size: 1rem; cursor: pointer; box-shadow: 0 10px 15px rgba(37, 211, 102, 0.3); transition: transform 0.2s;">
+            <i class="fa-solid fa-paper-plane" style="margin-right: 8px;"></i> Solicitar demo gratuita
+        </button>
+    </div>
+</section>
+
+<!-- SCRIPT UNIFICADO -->
+<script>
+    function toggleMenu() {
+        const navLinks = document.getElementById('navLinks');
+        // Para móvil, asegúrate de tener una clase CSS .active { display: flex !important; }
+        navLinks.classList.toggle('active');
+    }
+
+    function solicitarDemo() {
+        const numero = "593992661432"; 
+        const nombreNegocio = document.getElementById('nombreNegocio').value.trim();
+        const whatsappContacto = document.getElementById('whatsappContacto').value.trim();
+
+        if (nombreNegocio === "" || whatsappContacto === "0992661432") {
+            alert("Por favor, completa los campos.");
+            return;
+        }
+
+        const mensaje = `Hola VerifiCar Plus, me interesa una demo gratuita para mi negocio.\n\nNombre del Negocio: ${nombreNegocio}\nWhatsApp de contacto: ${whatsappContacto}\n\nPor favor, ayúdenme con más información.`;
+        window.open("https://wa.me/593992661432?text=" + encodeURIComponent(mensaje), '_blank');
+    }
+</script>
+
+<a href="veriPlus.pdf" download="Propuesta_Verificar_Plus.pdf" class="btn-descargar">
+    📥 Descargar Propuesta y Guía en PDF
+</a>
+
+<!-- FOOTER FINAL UNIFICADO -->
+<footer style="width: 100%; padding: 60px 20px; color: #4a5568; font-size: 0.95em; border-top: 5px solid #1d4099; background-color: #ffffff; text-align: center;">
+    <div style="max-width: 600px; margin: 0 auto;">
+        
+        <!-- Branding -->
+        <div style="margin-bottom: 35px;">
+            <p style="margin: 0; font-size: 1.8em; color: #1d4099; font-weight: 800;">VerifiCar <span style="color: #25d366;">Plus</span></p>
+            <p style="margin: 8px 0 0 0; color: #777; font-weight: 500; letter-spacing: 0.5px;">Tu aliado en la gestión digital de restaurantes.</p>
+        </div>
+        
+        <!-- Contacto -->
+        <div style="margin-bottom: 35px;">
+            <a href="mailto:plus@verificarecuador.com" style="display: inline-flex; align-items: center; color: #1d4099; font-weight: bold; text-decoration: none; padding: 10px 20px; border: 1px solid #e2e8f0; border-radius: 50px;">
+                <i class="fa-solid fa-envelope" style="margin-right: 10px;"></i> contacto@verificarecuador.com
+            </a>
+        </div>
+
+       <!-- Publicidad Cruzada (Tarjeta unificada) -->
+<div style="margin: 0 auto 35px auto; padding: 25px; background: #ffffff; border-radius: 20px; max-width: 450px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+    <p style="margin: 0 0 10px 0; color: #1d4099; font-weight: 700; font-size: 1em;">VerifiCar Ecuador</p>
+    <p style="margin: 0 0 15px 0; color: #777; font-size: 0.85em; font-style: italic;">"Datos que precisan, resultados que aceleran."</p>
+    <a href="https://verificarecuador.com" style="color: #1d4099; font-weight: bold; text-decoration: none; display: inline-flex; align-items: center; border-bottom: 1px solid #1d4099;">
+        Ir al servicio de historial vehicular <i class="fa-solid fa-arrow-up-right-from-square" style="margin-left: 8px; font-size: 0.8em;"></i>
+    </a>
+</div>
+        
+        <!-- Legal y Copyright -->
+        <div style="color: #777; font-size: 0.85em; border-top: 1px solid #edf2f7; padding-top: 25px;">
+            <p style="margin: 0 0 10px 0;"><i class="fa-solid fa-lock" style="margin-right: 6px;"></i> Datos protegidos bajo estándares de seguridad.</p>
+            <p style="margin: 5px 0;">&copy; 2026 VerifiCar Plus. Todos los derechos reservados.</p>
+            <p style="margin: 5px 0;">
+                <i class="fa-solid fa-location-dot" style="color: #e53e3e; margin-right: 5px;"></i> Operado desde <strong>Cuenca, Ecuador</strong>.
+            </p>
+        </div>
+    </div>
+</footer>
+
+<a href="https://wa.me/593992661432?text=Hola,%20vengo%20de%20VerifiCar%20Plus%20y%20deseo%20más%20información" 
+   target="_blank" 
+   style="position: fixed; bottom: 20px; right: 20px; background-color: #25D366; color: white; padding: 10px 16px; border-radius: 50px; text-decoration: none; font-weight: bold; box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4); z-index: 1000; font-family: 'Inter', sans-serif; font-size: 13px; display: flex; align-items: center; gap: 8px; transition: transform 0.2s;">
+   
+   <svg viewBox="0 0 24 24" width="18" height="18" fill="white">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.52-.075-.149-.67-1.612-.916-2.207-.242-.579-.487-.5-1.612-.5-.074 0-.148 0-.222 0-.223 0-.585.084-.891.417-.306.333-1.167 1.139-1.167 2.781 0 1.642 1.194 3.229 1.359 3.442.164.213 2.277 3.518 5.517 4.935.772.333 1.375.532 1.846.68.775.247 1.48.212 2.039.129.622-.093 1.916-.784 2.184-1.542.268-.758.268-1.408.185-1.542-.083-.133-.306-.213-.603-.362zM12 0C5.373 0 0 5.373 0 12c0 2.115.556 4.185 1.615 6L0 24l6.234-1.597C8.038 23.398 9.98 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.815c-1.745 0-3.456-.467-4.945-1.348l-.354-.21-3.674.937 1.01-3.582-.23-.374c-.97-1.58-1.482-3.408-1.482-5.264 0-5.594 4.555-10.149 10.149-10.149 5.595 0 10.15 4.555 10.15 10.149 0 5.594-4.555 10.149-10.15 10.149z"/>
+   </svg>
+   <span>¿Necesitas ayuda?</span>
+</a>
+</body>
+</html>
